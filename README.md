@@ -1,6 +1,6 @@
 # RESHAPE-MP-Analysis
 ## Diagnostic Accuracy Analysis for the RESHAPE Cluster-Randomized Trial
-Contains a truncated and focused version of the code that was used to analyze diagnostic accuracy in the RESHAPE dataset.
+Contains a truncated and focused version of the code that was used to analyze diagnostic accuracy in the RESHAPE dataset. The goal of this code is to provide a basic illustration of the analysis rather than enable perfect reproducibility.  
 
 ---
 
