@@ -22,24 +22,26 @@ This repository contains the core R code used to analyze diagnostic accuracy out
 - R (version 4.2.1 or higher)
 
 **Required packages:**
+
 ```r
 install.packages(c("foreign", "tidyverse", "geepack", "geesmv", "broom", "stringr", "ggplot2"))
+```
+
+---
 
 ### File Structure
 
 ```
 RESHAPE-MP-Analysis/
 ├── README.md
-└── RESHAPE MP Primary Analytic Code.Rmd 
-    
+└── RESHAPE MP Primary Analytic Code.Rmd
 ```
-
 
 ---
 
 ### Code Structure
 
-The script is organized into 13 sections corresponding to the statistical analysis report:
+The script is organized into 12 sections corresponding to the statistical analysis report:
 
 | Section | Description | Output |
 |----------|-------------|--------|
@@ -54,8 +56,6 @@ The script is organized into 13 sections corresponding to the statistical analys
 | 10 | Cluster line plots | Figures 1–2 |
 | 11 | Arm-level summaries | Tables 5–6 |
 | 12 | Cluster-level summaries | Tables 16–19 |
-| 13 | Save results | `.RData` file |
-
 ---
 
 ### Key Functions
@@ -71,7 +71,8 @@ Core GEE function with Kauermann–Carroll (KC) small-sample correction.
   - KC-corrected standard errors  
   - t-statistics  
   - p-values  
-- Uses degrees of freedom:
+
+Uses degrees of freedom:
 
 ```
 df = (# clusters) - (# parameters) - 1
@@ -113,8 +114,8 @@ Computes diagnostic accuracy metrics for each cluster:
 - **Clusters:** 26 randomization units (municipalities or groups of facilities)
 - **Small-sample correction:** Kauermann–Carroll (KC) for individual parameter tests
 - **Joint tests:** Robust sandwich covariance matrices (KC unstable for multivariate Wald tests)
-- **Link functions:**  
-  - Logit (primary analysis; odds ratios)  
+- **Link functions:**
+  - Logit (primary analysis; odds ratios)
   - Identity (risk difference comparison)
 
 ---
